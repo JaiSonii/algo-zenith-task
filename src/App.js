@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import LeftSidebar from './components/LeftSidebar';
+import MainContent from './components/MainContent';
+import { chapters } from './utils/utilArray';
+import '@fontsource/dm-sans';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="grid grid-cols-5 font-sans h-screen">
+      <div className='col-span-1'>
+        <LeftSidebar />
+      </div>
+      <div className='col-span-4'>
+        <MainContent chapters={chapters}/>
+      </div>
     </div>
   );
 }
