@@ -8,14 +8,15 @@ import '@fontsource/dm-sans';
 
 function App() {
   return (
-    <div className="grid grid-cols-5 font-sans h-screen">
-      <div className='col-span-1'>
+    <div className="grid grid-cols-5 font-sans h-screen overflow-hidden">
+      <div className="col-span-1 h-full">
         <LeftSidebar />
       </div>
-      <div className='col-span-4'>
-        <MainContent chapters={chapters}/>
+      <div className="col-span-4 h-full overflow-y-auto">
+        <MainContent chapters={chapters} />
       </div>
     </div>
+
   );
 }
 
